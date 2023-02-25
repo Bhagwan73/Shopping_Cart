@@ -138,7 +138,7 @@ catch(err) {
 
 const userLogin = async function(req,res){
     try{
-        if(!req.body){ return res.status(400).send({status:false, message:"Body can not be empty"}) }
+        if(Object.keys(req.body).length==0){ return res.status(400).send({status:false, message:"Body can not be empty"}) }
 
         const {email,password}=req.body
 

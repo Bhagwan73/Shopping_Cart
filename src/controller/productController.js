@@ -26,6 +26,8 @@ let createProduct = async function(req,res){
         }
 
 
+
+
         let {title,description, price,currencyId,currencyFormat,isFreeShipping,style,availableSizes,installments} = data1
 
         //validation for Empty input..
@@ -69,7 +71,7 @@ let createProduct = async function(req,res){
         return res.status(201).send({status:true, message:"Success", data:createdData})
     }
     catch(err){
-        res.status(500).send({status:false, message:err.message})
+       return  res.status(500).send({status:false, message:err.message})
     }
 }
 

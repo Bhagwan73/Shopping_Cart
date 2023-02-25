@@ -16,7 +16,7 @@ const createOrder=async function (req,res){
     let cart=await cartModel.findOne({_id:cartId,userId:userId})
     if(!cart) return res.status(404).send({status:false,message:"no any cart found for this perticular user"})
     
-    if(cart.items.length==0) return res.status(404).send({status:false,message:"this card dont have any product"})
+    // if(cart.items.length==0) return res.status(404).send({status:false,message:"this card dont have any product"})
     
   let createOrder={}
   createOrder.userId=userId
