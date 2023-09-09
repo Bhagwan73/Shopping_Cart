@@ -90,7 +90,7 @@ const createCart = async function (req,res){
 }
 
 
-//----------------------------------Update CArt-------------------------------------//
+//----------------------------------Update Cart-------------------------------------//
 const updateCart = async function (req, res){
     try {
         const { userId } = req.params
